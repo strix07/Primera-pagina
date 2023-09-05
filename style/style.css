@@ -1,81 +1,133 @@
-
-header{
-	padding-top: 90px;
-	color: white;
-	text-align: center;
-	font-size: 40px;
-	font-family: 'Roboto', sans-serif;
-	background-image: url('../picture/imagen 1.jpg');
-	background-size: cover;
-}
-h2{
-	font-size: 30px;
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-}
-h3{
-	font-size: 30px;
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-	padding-bottom: 2px;
+header {
+  padding-top: 90px;
+  padding-bottom: 30px; /* Ajusta la distancia entre el título y el contenido debajo de él */
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  -webkit-text-stroke: 2px black; /* Borde negro alrededor del texto */
+  text-stroke: 2px black; /* Borde negro alrededor del texto */
+  font-family: "Roboto", sans-serif;
+  background-image: url("../picture/imagen 1.jpg");
+  background-size: cover; /* Hace que la imagen de fondo sea responsive */
 }
 
-img{
-	margin:auto;
-	padding-bottom: 5px
+h1:hover,
+h2:hover {
+  color: #00aaff; /* Cambia el color del título al pasar el mouse sobre él */
 }
 
-main{
-	text-align: center;
+h2 {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  border: 3px solid rgb(0, 0, 0);
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
- 
-h4{
-	font-size: 30px;
-	font-family: 'Roboto', sans-serif;
-	border:3px solid darkred;
-	display: inline-block;
-	padding-left:30px; 
-	padding-right:30px;
-	padding-bottom: 15px;
-	padding-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
+p {
+  text-indent: 20px;
 }
-h5{
-	font-size: 30px;
-	font-family: 'Roboto', sans-serif;
-	border:3px solid darkred;
-	display: inline-block;
-	padding-left:30px; 
-	padding-right:30px;
-	padding-bottom: 15px;
-	padding-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-}
-h6{
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-	text-align: left;
-	width: 900px;
 
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+  display: block; /* Agrega esta línea para asegurarte de que las imágenes se comporten como bloques */
+  margin-left: auto; /* Centra horizontalmente */
+  margin-right: auto; /* Centra horizontalmente */
 }
-nav li{
-	display: inline-block;
-	padding: 20px;
+
+main {
+  text-align: center;
 }
+
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
 address {
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: thin dotted }
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted;
+}
 
-p{
-	padding-top: 2px;
-	text-align: justify;
-	padding-bottom: 5px;
-	width: 900px;
-	font-family: 'Newsreader', serif;
-	line-height:160%;
-	margin-left: auto;
-	margin-right: auto;
+p {
+  padding-top: 2px;
+  text-align: justify;
+  padding-bottom: 5px;
+  width: 900px;
+  font-family: "Newsreader", serif;
+  line-height: 160%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo para la lista de navegación */
+nav ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+  text-align: center; /* Centra los elementos de la lista horizontalmente */
+}
+
+nav {
+  padding-top: 50px; /* Ajusta la distancia superior según tus preferencias */
+  padding-bottom: 50px; /* Ajusta la distancia superior según tus preferencias */
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px; /* Añade espacio horizontal entre elementos de la lista */
+  padding: 10px 20px; /* Añade espacio interno alrededor del texto */
+  border: 1px solid #007bff; /* Agrega un borde */
+  border-radius: 5px; /* Redondea los bordes */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave de colores */
+}
+
+nav li a {
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  color: #020406; /* Color del texto de los enlaces */
+  font-weight: bold; /* Hace que los enlaces sean más audaces */
+}
+
+nav li:hover {
+  background-color: #007bff; /* Cambia el fondo al pasar el cursor sobre ellos */
+  color: #fff; /* Cambia el color del texto al pasar el cursor sobre ellos */
+  cursor: pointer; /* Cambia el cursor al pasar el cursor sobre ellos */
+}
+
+/* Haz que la barra de navegación sea responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Cambia la dirección de la lista a columna */
+  }
+
+  nav li {
+    display: block; /* Cambia la visualización a bloque */
+    margin: 10px 0; /* Añade espacio vertical entre elementos de la lista */
+  }
+}
+
+/*******************************************************************************************
+/* Estilos para el último elemento (logo de Instagram) */
+nav ul li:last-child {
+  border: none; /* Elimina el borde del último elemento (logo de Instagram) */
+}
+
+/* Estilos para los enlaces de Instagram */
+.instagram-link {
+  display: inline-block; /* Hace que el enlace ocupe solo el espacio necesario */
+  width: 60px; /* Ancho deseado */
+  height: 60px; /* Alto deseado */
+  vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+/* Estilos para el logo de Instagram */
+.instagram-logo {
+  width: 100%; /* El logo ocupa todo el ancho del enlace */
+  height: 100%; /* El logo ocupa todo el alto del enlace */
 }
